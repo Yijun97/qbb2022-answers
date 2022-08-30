@@ -2,21 +2,25 @@
 # Online Python - IDE, Editor, Compiler, Interpreter
 
 #USAGE: python scriptname.py input_filename [number_lines_to_display]
-import sys 
-filename = sys.argv[1] 
-list1 = []
+import sys #import sys
+filename = sys.argv[1] #Extracr the file name
+list1 = [] #creat a list for each line
+
+#determine the number of printed lines
 if len(sys.argv) > 2: 
   desired = int(sys.argv[2])
 else: 
   desired = 10 
+  
+#add the lines in to the list with their position information
 for line in open(filename): 
   list1.append(line)
  
-list1.reverse()
-list1 = list1[:desired]
-list1.reverse()
+list1.reverse() #reverse the list to  get the  required lines
+list1 = list1[:desired] #extract the list
+list1.reverse() #reverse again to get the right order
 
-for element in list1:
+for element in list1: #print the lines
 
         print(element)
 
