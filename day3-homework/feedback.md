@@ -1,0 +1,3 @@
+# Feedback day3-homework
+
+Overall this looks good. You plotting code looks good and your plots look correct. It's worth toying with formatting when plotting when you have issues like a legend covering data. Also, your way of extracting the different categories for each metadata group was clever. There is also a way to do this in your python code. Since your data is in a numpy array, you can use the `numpy.unique` function which finds a set of unique values in an unsorted array. So you could have used the command `pop = np.unique(info["Population"]`. But all in all, well done. Keep it up!
