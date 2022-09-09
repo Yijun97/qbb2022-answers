@@ -28,6 +28,8 @@ the code:
 
 Among the points, I notice that more data dots have positive PCA3 than  positive PCA2 when their PCA1 is near 0. Meanwhile, when PCA1 is near 0, which means PCA1 has less impact on the data, PCA3 is more evenly attributed along its axis, while PCA2 is more likely to be seperated. This means if PCA1 is not considered, PCA2 is a more important factor in affecting data distribution.
 
+The  PCA1/PCA2 could separate  superpopulation better 
+
 
 
 

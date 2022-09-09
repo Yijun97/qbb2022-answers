@@ -39,7 +39,7 @@ for i in range(len(pop)):  #for each type
 ax.set_xlabel("PCA1")
 ax.set_ylabel("PCA2")
 ax.set_title("PCA analysis based on population groups")
-ax.legend()
+ax.legend(loc = 1, ncol = 4) 
 
 plt.savefig("ex3_a.png")
 

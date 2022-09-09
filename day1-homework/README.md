@@ -1,7 +1,7 @@
 # QBB2022 - Day 1 - Homework Exercises Submission
 Exercise 1: 
 error messaage: awk: illegal field $(), name "nuc"
-when I searched Google, I saw that "Use -v option in awk to pass shell variables to awk:", so I noticed that the variable "nuc"  was not delivered to akd properly. So I editted the exercise11.sh into:
+when I searched Google, I saw that "Use -v option in awk to pass shell variables to awk:", so I noticed that the variable "nuc"  was not delivered to akd properly. So I editted the exercise1.sh into:
 awk -v nuc=$nuc '/^#/{next} {if ($4 == nuc) {print $5}}' $1 | sort | uniq -c
 The readout: 
 Considering  A
@@ -60,7 +60,7 @@ so I sorted  the varianst.bed
 sort -k1,1 -k2,2n variants.bed  > newvariants.bed
 The exercise3.sh now  shows as:
 awk '/^#/{next} {print $1,$2-1, $2}' $1 > variants.bed
-perl -p -i -e 's/ /\t/g' variants.bed 
+perl -p -i -e 's/ /\t/g' variants.bed # awk  -v OFS='/t/' {print $1,$2-1,$2} > variants.bed
 sort -k1,1 -k2,2n variants.bed  > newvariants.bed
 sort -k1,1 -k2,2n ~/data/bed_files/genes.bed > genes.sorted.bed
 bedtools closest -a newvariants.bed -b genes.sorted.bed
