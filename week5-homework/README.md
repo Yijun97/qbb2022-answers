@@ -19,6 +19,10 @@ So, there are 40 overlapping peaks.
 'wc D2_Klf4_peaks.bed'
 I got "60     600    4262"
 There are 60 peaks in Klf4.
+for Sox2
+wc intersect_1.bed'
+     593    5930   40564 intersect_1.bed
+There are 593 peaks in Sox2.
 Thus, 41/60 * 100% = 68.3% of the Klf4 peaks colocalized with Sox2.
 
 5. plot
