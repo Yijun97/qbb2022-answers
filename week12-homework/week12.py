@@ -73,6 +73,19 @@ ax.set_title('time to fixation with different population')
 plt.savefig("fixation time over different population size")
 plt.show()
 
+#part5 a plot showing starting allele frequency (x-axis) vs. time to fix (y-axis)
+fixation_time_start_allele = []
+allele_fre_range_1 = [0.05,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9]
+for fre in allele_fre_range_1:
+	fixation_allele_fre_1 = allele_fixed(fre, 1000)
+	fixation_time_start_allele.append(len(fixation_allele_fre_1))
+fig, ax = plt.subplots()
+ax.plot(allele_fre_range_1, fixation_time_start_allele)
+ax.set_ylabel("fixation time")
+ax.set_xlabel("starting allele frequency")
+ax.set_title('time to fixation with different starting allele frequency')
+plt.savefig("fixation time over different starting allele frequency")
+plt.show()
 
 #part5 producing the variantion plot for the fix time of each start allele frequency, where 
 #      the population size is 1000, and simulates each allele frequency for 100 times.
