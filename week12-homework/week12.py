@@ -10,14 +10,14 @@ from matplotlib.lines import Line2D
 def allele_fixed(start_allele_frequency, population_size):
 	allele_frequency_each_generation = []
 	i = 1
-	s = np.random.binomial(2*population_size, start_allele_frequency,i)[0]
+	s = np.random.binomial(2*population_size, start_allele_frequency)
 	fre = s/(2*population_size)
 	fre_al = 1-fre
 	allele_frequency_each_generation.append(fre)
 	while  fre != 1 and fre_al != 1:
 		i += 1
 		# print(i)
-		s = np.random.binomial(2*population_size, fre,i)[0]
+		s = np.random.binomial(2*population_size, fre)
 		fre = s/(2*population_size)
 		fre_al = 1 - fre
 		allele_frequency_each_generation.append(fre)
@@ -59,7 +59,7 @@ plt.show()
 
 #part4 plot for fix time changing with the population size
 fixation_time_population_size = []
-population = [100,1000,5000,10000,50000,100000]
+population = [100,1000,10000,100000,1000000,10000000]
 for N in population:
 	fixation_allele_number = allele_fixed(0.5, N)
 	fixation_time_population_size.append(len(fixation_allele_number))
