@@ -5,3 +5,9 @@ Awesome work, this is almost exactly what we were looking for. Just one small th
 But, everything else is really great!
 
 (8/10)
+
+REGRADE 12/16/2022 -- Dylan
+
+Great work on fixing those Manhattan plots!
+
+(10/10)
